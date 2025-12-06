@@ -51,3 +51,9 @@ data_waste <- data_waste %>%
 
 
 datasummary(~average_household_size*(mean+N+sd+median),data = data_waste)
+
+## box plot
+data_waste %>% 
+  ggplot()+
+  aes(y=total,colour = ward)+
+  geom_boxplot()
